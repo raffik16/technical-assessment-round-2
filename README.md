@@ -15,6 +15,8 @@ https://xd.adobe.com/view/91370cf5-0ce3-46c4-94e1-f0033df25fa3-c464/
 The XD design prototype is limited, please see this movie for a better explanation of the required motion and timing:
 https://www.dropbox.com/sh/1oc5bccnky06l7a/AABiiOkGr7WGSyljFU2RLTtZa?dl=0&preview=Funkhaus+Slideshow+Component+Sample+-+Animation.mp4
 
+This is a good reference site using a similar slideshow: https://mamaggroup.com
+
 **Notes**
 
 1.  XD does allow you to see the specs of all the elements. Click the `</>` button in top right corner.
