@@ -1,9 +1,11 @@
+<!-- Add clear comment with each tag on how each prop is being used. -->
 <template>
     <nuxt-link
         :to="to"
         class="block-featured"
     >
         <div class="featured-text">
+            <!-- Can you please explain how split-text is working? -->
             <split-text
             v-if="title"
             element="h2"
@@ -33,6 +35,8 @@ import WpImage from "~/components/includes/WpImage"
 import SplitText from "~/components/includes/SplitText"
 
 export default {
+    // Add component name
+    name: "featured",
     components: {
         WpImage,
         SplitText
@@ -61,13 +65,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// Featured Block UI
 .block-featured {
     position: relative;
     display: block;
     width: 100%;
     margin: 200px auto 600px;
 
-    // Text
+    // Featured Text UI
     .featured-text {
         position: absolute;
         top: 50%;
@@ -76,14 +81,15 @@ export default {
         z-index: 40;
         text-align: right;
     }
+    // Can you explain how /deep/ works and why you need it?
     /deep/ .title {
         display: flex;
         flex-direction: column;
-
         margin: 0;
         font-family: var(--font-secondary);
         font-weight: 700;
         text-align: right;
+
         .line-1 {
             font-size: 50px;
         }
@@ -105,17 +111,14 @@ export default {
     .secondary-image.mode-intrinsic-ratio {
         width: 66%;
         max-width: 780px;
-
         position: absolute;
         top: 50%;
         right: 50px;
         transform: translateY(45%);
         z-index: 30;
-
         pointer-events: none;
         transition: transform 0.4s $authenticMotion;
     }
-
 
     @media #{$has-hover} {
         &:hover {
@@ -128,6 +131,7 @@ export default {
         }
     }
 
+    // You should be able to move these breakpoints to their respected selectors since you are using sass.
     @media #{$lt-tablet} {
         margin: 100px auto 400px;
 
@@ -135,6 +139,8 @@ export default {
             right: 0;
         }
     }
+
+    // You should be able to move these breakpoints to their respected selectors since you are using sass.
     @media #{$lt-phone} {
         margin: 50px auto 300px;
 
@@ -148,6 +154,8 @@ export default {
             font-size: 12px;
         }
     }
+
+    // Please convert to mobile first breakpoint for better scalability.
     @media only screen and (max-width: 500px) {
         margin: 50px auto 200px;
     }
